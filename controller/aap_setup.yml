@@ -18,3 +18,4 @@ pre_tasks:
 
 roles:
   - {role: infra.controller_configuration.users, when: controller_user_accounts is defined}
+  - {role: infra.controller_configuration.credential_types, when: controller_credential_types is defined}
