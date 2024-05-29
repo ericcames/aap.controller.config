@@ -1,0 +1,9 @@
+---
+controller_inventories:
+  - name: Windows AWS Inventory - Managed
+    organization: Ames Company
+    variables:
+      ansible_connection: winrm
+      ansible_winrm_transport: credssp
+      ansible_winrm_server_cert_validation: ignore
+      ansible_port: 5986

@@ -23,3 +23,4 @@ roles:
   - {role: infra.controller_configuration.organizations, when: controller_organizations is defined}
   - {role: infra.controller_configuration.credentials, when: controller_credentials is defined}
   - {role: infra.controller_configuration.hosts, when: controller_hosts is defined}
+  - {role: infra.controller_configuration.inventories, when: controller_inventories is defined}
