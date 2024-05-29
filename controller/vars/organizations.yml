@@ -2,3 +2,6 @@
 controller_organizations:
   - name: Ames Company
     description: Ames' Automation Company
+
+  - name: Lowcher Company
+    description: Lowcher's Automation Company

@@ -3,3 +3,7 @@ controller_user_accounts:
  - user: zigfreed
    is_superuser: true
    password: "{{ zigs_passwd }}"
+
+ - user: mlowcher
+   is_superuser: true
+   password: "{{ marks_passwd }}"
