@@ -6,7 +6,6 @@ vars:
   controller_hostname: aap.kona.services
   controller_username: "{{ controller_username }}"
   controller_password: "{{ controller_password }}"
-  no_log: false
 collections:
   - ansible.controller
 
