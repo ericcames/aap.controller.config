@@ -1,9 +1,0 @@
----
-eda_users:
-- username: hercules
-  first_name: Eric
-  last_name: Ames
-  email: ames@redhat.com
-  password: "{{ herc_passwd }}"
-  roles:
-    - Admin
