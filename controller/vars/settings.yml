@@ -5,3 +5,5 @@ controller_settings:
     REDHAT_USERNAME: "{{ redhat_username }}"
     REDHAT_PASSWORD: "{{ redhat_passwd }}"
     INSIGHTS_TRACKING_STATE: true
+    ANSIBLE_FACT_CACHE_TIMEOUT: 86400
+    ALLOW_OAUTH2_FOR_EXTERNAL_USERS: true
