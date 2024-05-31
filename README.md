@@ -9,3 +9,17 @@
 
 **Red Hat Ansible Automation Hub Configuration Collection**
 - [infra.ah_configruation Documentation]( https://console.redhat.com/ansible/automation-hub/repo/validated/infra/ah_configuration/docs/ "infra.ah_configruation Documentation")
+
+Example excerpt from inventory file:
+===========
+```
+# AAP Controller - optional
+# -------------------------
+# To use the postinstall feature you need to set these variables
+controller_postinstall=true
+controller_license_file=/home/ansible-svc/.manifest/manifest_Zigfreed_20240528T153016Z.zip
+controller_postinstall_dir=/home/ansible-svc/git-repos
+# When using config-as-code in a git repository
+controller_postinstall_repo_url=https://github.com/ericcames/aap.controller.config.git
+controller_postinstall_repo_ref=main
+```
