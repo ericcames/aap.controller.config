@@ -17,9 +17,9 @@ Example excerpt from inventory file:
 # -------------------------
 # To use the postinstall feature you need to set these variables
 controller_postinstall=true
-controller_license_file=/home/ansible-svc/.manifest/manifest_Zigfreed_20240528T153016Z.zip
+controller_license_file=/home/ansible-svc/.manifest/{{ manifest_file_name }}
 controller_postinstall_dir=/home/ansible-svc/git-repos
 # When using config-as-code in a git repository
-controller_postinstall_repo_url=https://github.com/ericcames/aap.controller.config.git
+controller_postinstall_repo_url={{ controller_postinstall_repo_url }}
 controller_postinstall_repo_ref=main
 ```
