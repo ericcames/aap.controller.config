@@ -7,3 +7,11 @@ controller_user_accounts:
  - user: mlowcher
    is_superuser: true
    password: "{{ marks_passwd }}"
+
+ - user: faith
+   is_superuser: true
+   password: "{{ marks_passwd }}"
+
+ - user: zleblanc
+   is_superuser: true
+   password: "{{ marks_passwd }}"
