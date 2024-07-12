@@ -1,0 +1,15 @@
+---
+controller_templates:
+  - name: Daily Demo Linux create
+    job_type: run
+    inventory: AAP Managed Inventory
+    execution_environment: Default execution environment
+    project: aap.dailydemo.linux
+    playbook: playbooks/site_create.yml
+    credentials:
+      - aap.kona.services:8443 controller
+      - AWS Credential
+      - AWS Machine Credential
+      - ericames-vault
+      - Mail Server - Ames
+    extra_vars:
