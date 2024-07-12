@@ -11,3 +11,9 @@ controller_organizations:
 
   - name: Chua Company
     description: Chua's Automation Company
+
+  - name: Gilbert Company
+    description: Gilbert's Automation Company
+
+  - name: Gallego Company
+    description: Gallegos Automation Company
