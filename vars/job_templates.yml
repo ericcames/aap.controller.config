@@ -3,6 +3,7 @@ controller_templates:
   - name: Daily Demo Linux create
     job_type: run
     inventory: AAP Managed Inventory
+    organization: Ames Company
     execution_environment: Default execution environment
     project: aap.dailydemo.linux
     playbook: playbooks/site_create.yml
@@ -13,3 +14,92 @@ controller_templates:
       - ericames-vault
       - Mail Server - Ames
     extra_vars:
+      customer_portal_username: "{{ redhat_username }}"
+      ansible_python_interpreter: /usr/bin/python3
+      mailfrom: "{{ smtp_username }}" ("{{ zigs_firstname }}" "{{ zigs_lastname }}")
+      mailto:
+      - "{{ zigs_firstname }}" "{{ zigs_lastname }}" <"{{ zigs_email }}">
+      bccto:
+      - "{{ zigs_firstname }}" "{{ zigs_lastname }}" <"{{ zigs_email }}">
+
+  - name: Daily Demo Linux Delete
+    job_type: run
+    inventory: AAP Managed Inventory
+    organization: Ames Company
+    execution_environment: Default execution environment
+    project: aap.dailydemo.linux
+    playbook: playbooks/site_delete.yml
+    credentials:
+      - aap.kona.services:8443 controller
+      - AWS Credential
+      - AWS Machine Credential
+    extra_vars:
+      customer_portal_username: "{{ redhat_username }}"
+
+  - name: Daily Demo Windows delete
+    job_type: run
+    inventory: AAP Managed Inventory
+    organization: Ames Company
+    execution_environment: Default execution environment
+    project: aap.dailydemo.windows
+    playbook: playbooks/site_delete.yml
+    credentials:
+      - aap.kona.services:8443 controller
+      - AWS Credential
+
+  - name: DDL - Application Install
+    job_type: run
+    inventory: AAP Managed Inventory
+    organization: Ames Company
+    execution_environment: Default execution environment
+    project: aap.dailydemo.linux
+    playbook: playbooks/lamp_setup_08.yml
+    credentials:
+      - AWS Machine Credential
+
+  - name: DDL - Configuration Management
+    job_type: run
+    inventory: AAP Managed Inventory
+    organization: Ames Company
+    execution_environment: Default execution environment
+    project: aap.dailydemo.linux
+    playbook: playbooks/post_install_06.yml
+    use_fact_cache: true
+    credentials:
+      - AWS Machine Credential
+    extra_vars:
+      ansible_python_interpreter: /usr/bin/python3
+
+  - name: DDL - Create a CMDB record
+    job_type: run
+    inventory: AAP Managed Inventory
+    organization: Ames Company
+    execution_environment: Default execution environment
+    project: aap.dailydemo.linux
+    playbook: playbooks/servicenow/create_ci.yml
+    credentials:
+      - ServiceNow ITSM Credential
+    extra_vars:
+      ci_assigned_to: hercules
+
+  - name: DDL - Create CMDB relationship
+    job_type: run
+    inventory: AAP Managed Inventory
+    organization: Ames Company
+    execution_environment: Default execution environment
+    project: aap.dailydemo.linux
+    playbook: playbooks/servicenow/create_cmdb_relationship.yml
+    credentials:
+      - ServiceNow ITSM Credential
+
+  - name: DDL - Create Incident
+    job_type: run
+    inventory: AAP Managed Inventory
+    organization: Ames Company
+    execution_environment: Default execution environment
+    project: aap.dailydemo.linux
+    playbook: playbooks/servicenow/incident_create.yml
+    credentials:
+      - ServiceNow ITSM Credential
+    extra_vars:
+      caller_name: hercules
