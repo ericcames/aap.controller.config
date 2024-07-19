@@ -315,3 +315,132 @@ controller_templates:
     playbook: playbooks/windows_patching_07.yml
     credentials:
       - Daily Demo Windows
+
+  - name: DDW - Powershell Improvement
+    job_type: run
+    inventory: AAP Managed Inventory
+    organization: Ames Company
+    execution_environment: Windows Workshop Execution Environment
+    project: aap.dailydemo.windows
+    playbook: playbooks/powershell_improve_05.yml
+    credentials:
+      - Daily Demo Windows
+
+  - name: DDW - Provision Access
+    job_type: run
+    inventory: AAP Managed Inventory
+    organization: Ames Company
+    execution_environment: Default execution environment
+    project: aap.dailydemo.windows
+    playbook: playbooks/windows_account_create_06.yml
+    credentials:
+      - Daily Demo Windows
+
+  - name: DDW - sendmail
+    job_type: run
+    inventory: AAP Managed Inventory
+    organization: Ames Company
+    execution_environment: Default execution environment
+    project: aap.dailydemo.windows
+    playbook: playbooks/sendmail_10.yml
+    credentials:
+      - Mail Server - Ames
+    extra_vars:
+      mailfrom: "{{ smtp_username }}" ("{{ zigs_firstname }}" "{{ zigs_lastname }}")
+      mailto:
+      - "{{ zigs_firstname }}" "{{ zigs_lastname }}" <"{{ zigs_email }}">
+      bccto:
+      - "{{ zigs_firstname }}" "{{ zigs_lastname }}" <"{{ zigs_email }}">
+
+  - name: DDW - Update request ticket - failure
+    job_type: run
+    inventory: AAP Managed Inventory
+    organization: Ames Company
+    execution_environment: Default execution environment
+    project: aap.dailydemo.windows
+    playbook: playbooks/servicenow/update_sn_req_itm.yml
+    credentials:
+      - ServiceNow ITSM Credential
+    extra_vars:
+      requested_item_comments: "Uh-Oh something broke.\n\nServiceNow incident number: {{ incident_ticket }}\n\nAnsible Job ID: {{ my_job_id }}\n\nMessage: {{ my_error }}"
+      requested_item_state: 4
+
+  - name: DDW - Update request ticket - success
+    job_type: run
+    inventory: AAP Managed Inventory
+    organization: Ames Company
+    execution_environment: Default execution environment
+    project: aap.dailydemo.windows
+    playbook: playbooks/servicenow/update_sn_req_itm.yml
+    credentials:
+      - ServiceNow ITSM Credential
+    extra_vars:
+      requested_item_comments: "Provisioning details\n\nVPC Create Time: {{ vpc_create_time }}\n\nMachine Create Time: {{ machine_create_time }} \n\nRedHat Subscription Time: {{ subscription_time }}\n\nPost Install Time: {{ post_install_time }}\n\nWebsite Start Time: {{ lamp_time }}\n\nPublic DNS Name: {{ my_server }} \n\nPublic IP Address: {{ my_public_ip }}\n\nAWS AMI ID: {{ my_ami_id }}\n\nAWS Instance ID: {{ my_instance_id }}\n\nAWS Instance Type: {{ my_instance_type }} \n\nAWS availability zone: {{ my_availability_zone }}"
+      requested_item_state: 3
+
+  - name: DDW - VM Create
+    job_type: run
+    inventory: AAP Managed Inventory
+    organization: Ames Company
+    execution_environment: Default execution environment
+    project: aap.dailydemo.windows
+    playbook: playbooks/create_instance_02.yml
+    credentials:
+      - AWS Credential
+      - Daily Demo Windows
+
+  - name: DDW - Website Setup
+    job_type: run
+    inventory: AAP Managed Inventory
+    organization: Ames Company
+    execution_environment: Default execution environment
+    project: aap.dailydemo.windows
+    playbook: playbooks/website_setup_06.yml
+    credentials:
+      - Daily Demo Windows
+    extra_vars:
+      sales_email_id: gwormmee
+      sales_person_name: Greg Wormmeester
+      tech_email_id: eric.ames
+      tech_person_name: Eric Ames
+
+  - name: python secrets to localhost
+    job_type: run
+    inventory: AAP Managed Inventory
+    organization: Ames Company
+    execution_environment: Default execution environment
+    project: aap.secrets-scripts
+    playbook: playbooks/python_secrets_localhost.yml
+    credentials:
+      - AWS Machine Credential
+      - my api tokens
+
+  - name: python secrets to remotehost method 1
+    job_type: run
+    inventory: AAP Managed Inventory
+    organization: Ames Company
+    execution_environment: Default execution environment
+    project: aap.secrets-scripts
+    playbook: playbooks/python_secrets_remotehost_method_1.yml
+    credentials:
+      - AWS Machine Credential
+      - ericames-vault
+
+  - name: python secrets to remotehost method 2
+    job_type: run
+    inventory: AAP Managed Inventory
+    organization: Ames Company
+    execution_environment: Default execution environment
+    project: aap.secrets-scripts
+    playbook: playbooks/python_secrets_remotehost_method_2.yml
+    credentials:
+      - AWS Machine Credential
+      - ericames-vault
+
+  - name: web checks are good
+    job_type: run
+    inventory: AAP Managed Inventory
+    organization: Ames Company
+    execution_environment: Default execution environment
+    project: aap.dailydemo.linux
+    playbook: playbooks/eda/print.yml
