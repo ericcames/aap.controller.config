@@ -16,4 +16,7 @@ controller_organizations:
     description: Gilbert's Automation Company
 
   - name: Gallego Company
-    description: Gallegos Automation Company
+    description: Gallegos' Automation Company
+
+  - name: Allmen Company
+    description: Allmen's Automation Company

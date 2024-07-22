@@ -49,6 +49,13 @@ controller_user_accounts:
    first_name: "{{ gils_firstname }}"
    last_name: "{{ gils_lastname }}"
 
+ - user: "{{ allmen_username}}"
+   is_superuser: true
+   password: "{{ allmen_passwd }}"
+   email: "{{ allmen_email }}"
+   first_name: "{{ allmen_firstname }}"
+   last_name: "{{ allmen_lastname }}"
+
  - user: "{{ lows_username}}"
    password: "{{ lows_passwd }}"
    email: "{{ lows_email }}"
