@@ -28,7 +28,7 @@
         state: present
 
     - name: Export Workflow Job template
-      register: "{{ my_workflow_info | ansible.builtin.to_yaml }}"
+      register: my_workflow_info
       changed_when: false
       ansible.controller.export:
         controller_host: https://{{ controller_url }}
@@ -37,4 +37,4 @@
 
     - name: Print out my workflow information
       ansible.builtin.debug:
-        var: my_workflow_info
+        msg: "{{ my_workflow_info | ansible.builtin.to_yaml }}"
