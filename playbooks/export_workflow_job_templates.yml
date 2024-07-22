@@ -37,4 +37,4 @@
 
     - name: Print out my workflow information
       ansible.builtin.debug:
-        msg: "{{ my_workflow_info | ansible.builtin.to_yaml }}"
+        var: my_workflow_info | ansible.builtin.to_yaml
