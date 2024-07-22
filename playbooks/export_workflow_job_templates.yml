@@ -28,19 +28,13 @@
         state: present
 
     - name: Export Workflow Job template
-      register: my_json_workflow_info
+      register: "{{ my_workflow_info | ansible.builtin.to_yaml }}"
       changed_when: false
       ansible.controller.export:
         controller_host: https://{{ controller_url }}
         controller_oauthtoken: "{{ controller_token }}"
         workflow_job_templates: "{{ workflow_job_template_name }}"
 
-    - name: Convert the json to yaml
-      register: my_yaml_workflow_info
-      changed_when: false
-      ansible.builtin.to_yaml:
-        var: my_json_workflow_info
-
-    - name: Print out my yaml
+    - name: Print out my workflow information
       ansible.builtin.debug:
-        var: my_yaml_workflow_info
+        var: my_workflow_info
