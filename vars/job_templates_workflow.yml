@@ -1,0 +1,819 @@
+---
+controller_workflows:
+  - name: Daily Demo Linux Workflow
+    description: ''
+    extra_vars: |-
+      ---
+      ticket_number: "RITM0010386"
+    survey_enabled: false
+    allow_simultaneous: false
+    ask_variables_on_launch: false
+    inventory:
+    limit:
+    scm_branch:
+    ask_inventory_on_launch: false
+    ask_scm_branch_on_launch: false
+    ask_limit_on_launch: false
+    webhook_service: ''
+    webhook_credential:
+    ask_labels_on_launch: false
+    ask_skip_tags_on_launch: false
+    ask_tags_on_launch: false
+    skip_tags:
+    job_tags:
+    organization:
+      name: "******** Company"
+      type: organization
+    related:
+      schedules: []
+      workflow_nodes:
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: 977868e5-f8********b-4b5d-a16a-97a********fdd34707
+        workflow_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: DDL - Network Create
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "******** Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            identifier: d********ea********0fe-0d********6-4bd4-a3cd-e49c7cb0f3eb
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "******** Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          identifier: 977868e5-f8********b-4b5d-a16a-97a********fdd34707
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: d********ea********0fe-0d********6-4bd4-a3cd-e49c7cb0f3eb
+        workflow_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: DDL - VM Create
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "******** Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            identifier: 179bae15-9191-4963-ba3********-********14590353efb
+            type: workflow_job_template_node
+          failure_nodes:
+          - workflow_job_template:
+              organization:
+                name: "******** Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            identifier: a1ec08b1-0615-49********d-8c04-01a4********b7f65ad
+            type: workflow_job_template_node
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "******** Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          identifier: d********ea********0fe-0d********6-4bd4-a3cd-e49c7cb0f3eb
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: 179bae15-9191-4963-ba3********-********14590353efb
+        workflow_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: DDL - Inventory Update
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "******** Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            identifier: '0594ec31-********e77-480f-874b-c3f71071637b'
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "******** Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          identifier: 179bae15-9191-4963-ba3********-********14590353efb
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: '0594ec31-********e77-480f-874b-c3f71071637b'
+        workflow_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: DDL - Get Instance Info
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "******** Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            identifier: 4ee9eee0-d1c7-4a00-8b6f-e1bae7e9b871
+            type: workflow_job_template_node
+          - workflow_job_template:
+              organization:
+                name: "******** Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            identifier: 4aad6d38-9ba8-4fb6-99c1-cbc5********b834d51
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "******** Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          identifier: '0594ec31-********e77-480f-874b-c3f71071637b'
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: 4ee9eee0-d1c7-4a00-8b6f-e1bae7e9b871
+        workflow_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: DDL - Red Hat Registration
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "******** Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            identifier: 39********88eeb-fdd3-4059-ab60-c8f5be94e********7b
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "******** Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          identifier: 4ee9eee0-d1c7-4a00-8b6f-e1bae7e9b871
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: 39********88eeb-fdd3-4059-ab60-c8f5be94e********7b
+        workflow_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: DDL - Configuration Management
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "******** Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            identifier: eb6a6cce-09b1-4990-aa95-edbc99b4b0e1
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "******** Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          identifier: 39********88eeb-fdd3-4059-ab60-c8f5be94e********7b
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: eb6a6cce-09b1-4990-aa95-edbc99b4b0e1
+        workflow_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: DDL - Provision Access
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "******** Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            identifier: 6b********afcd8-14********7-4970-b7********d-ec5c5880cf31
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "******** Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          identifier: eb6a6cce-09b1-4990-aa95-edbc99b4b0e1
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: 6b********afcd8-14********7-4970-b7********d-ec5c5880cf31
+        workflow_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: DDL - Application Install
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "******** Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            identifier: c68f64e5-4ba3-48bc-b868-0d********06e7f4487
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "******** Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          identifier: 6b********afcd8-14********7-4970-b7********d-ec5c5880cf31
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: c68f64e5-4ba3-48bc-b868-0d********06e7f4487
+        workflow_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: DDL - Website deployment
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "******** Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            identifier: 6f97376b-5857-4a76-ab5e-4b163b6d4fa5
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "******** Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          identifier: c68f64e5-4ba3-48bc-b868-0d********06e7f4487
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: 1de088f4-7757-431f-979********-f5863********a31bc6
+        workflow_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: DDL - sendmail
+          type: job_template
+        related:
+          credentials: []
+          success_nodes: []
+          failure_nodes: []
+          always_nodes:
+          - workflow_job_template:
+              organization:
+                name: "******** Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            identifier: c0d9********cf6-04bb-4474-bc********9-9991f9106e76
+            type: workflow_job_template_node
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "******** Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          identifier: 1de088f4-7757-431f-979********-f5863********a31bc6
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: 4aad6d38-9ba8-4fb6-99c1-cbc5********b834d51
+        workflow_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: DDL - Create a CMDB record
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "******** Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            identifier: 1bea093e-ced9-4716-8034-1fb799d7c97c
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "******** Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          identifier: 4aad6d38-9ba8-4fb6-99c1-cbc5********b834d51
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: 1bea093e-ced9-4716-8034-1fb799d7c97c
+        workflow_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: DDL - Create CMDB relationship
+          type: job_template
+        related:
+          credentials: []
+          success_nodes: []
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "******** Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          identifier: 1bea093e-ced9-4716-8034-1fb799d7c97c
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: a1ec08b1-0615-49********d-8c04-01a4********b7f65ad
+        workflow_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: DDL - Create Incident
+          type: job_template
+        related:
+          credentials: []
+          success_nodes: []
+          failure_nodes: []
+          always_nodes:
+          - workflow_job_template:
+              organization:
+                name: "******** Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            identifier: d********e036a8-91bf-456a-a378-8d9********7ca3df39
+            type: workflow_job_template_node
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "******** Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          identifier: a1ec08b1-0615-49********d-8c04-01a4********b7f65ad
+          type: workflow_job_template_node
+      - extra_data:
+          requested_item_state: '3'
+          requested_item_comments: Ansible Automation Platform is closing the request
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: c0d9********cf6-04bb-4474-bc********9-9991f9106e76
+        workflow_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: DDL - Update request ticket - success
+          type: job_template
+        related:
+          credentials: []
+          success_nodes: []
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "******** Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          identifier: c0d9********cf6-04bb-4474-bc********9-9991f9106e76
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: 6f97376b-5857-4a76-ab5e-4b163b6d4fa5
+        workflow_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: DDL - Reporting
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "******** Company"
+                type: organization
+              name: Daily Demo Linux Workflow
+              type: workflow_job_template
+            identifier: 1de088f4-7757-431f-979********-f5863********a31bc6
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "******** Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          identifier: 6f97376b-5857-4a76-ab5e-4b163b6d4fa5
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: d********e036a8-91bf-456a-a378-8d9********7ca3df39
+        workflow_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: Daily Demo Linux Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "******** Company"
+            type: organization
+          name: DDL - Update request ticket - failure
+          type: job_template
+        related:
+          credentials: []
+          success_nodes: []
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "******** Company"
+              type: organization
+            name: Daily Demo Linux Workflow
+            type: workflow_job_template
+          identifier: d********e036a8-91bf-456a-a378-8d9********7ca3df39
+          type: workflow_job_template_node
+      labels: []
+      notification_templates_started: []
+      notification_templates_success: []
+      notification_templates_error: []
+      notification_templates_approvals: []
+      survey_spec: {}
+    natural_key:
+      organization:
+        name: "******** Company"
+        type: organization
+      name: Daily Demo Linux Workflow
+      type: workflow_job_template
