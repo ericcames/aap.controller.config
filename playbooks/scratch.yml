@@ -1,0 +1,727 @@
+---
+controller_workflows:
+  - name: Daily Demo Windows Workflow
+    description: ''
+    extra_vars: |-
+      ---
+      ticket_number: "RITM0010386"
+    survey_enabled: false
+    allow_simultaneous: false
+    ask_variables_on_launch: false
+    inventory:
+    limit:
+    scm_branch:
+    ask_inventory_on_launch: false
+    ask_scm_branch_on_launch: false
+    ask_limit_on_launch: false
+    webhook_service: ''
+    webhook_credential:
+    ask_labels_on_launch: false
+    ask_skip_tags_on_launch: false
+    ask_tags_on_launch: false
+    skip_tags:
+    job_tags:
+    organization:
+      name: "Ames Company"
+      type: organization
+    related:
+      schedules: []
+      workflow_nodes:
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: 55dfe549-7306-4d73-9c00-00********5********bc6f161
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - Network Create
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            identifier: ac3e9b1a-c603-4********66-911c-6f5d81c********a6be
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          identifier: 55dfe549-7306-4d73-9c00-00********5********bc6f161
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: ac3e9b1a-c603-4********66-911c-6f5d81c********a6be
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - VM Create
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            identifier: 073ba6e5-1dc3-4fb7-a4e7-01066f9bcd8c
+            type: workflow_job_template_node
+          failure_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            identifier: 1c960f57-9e1d-4b33-b7c4-4b90a7a064ca
+            type: workflow_job_template_node
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          identifier: ac3e9b1a-c603-4********66-911c-6f5d81c********a6be
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: 073ba6e5-1dc3-4fb7-a4e7-01066f9bcd8c
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - Inventory Update
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            identifier: c670eb6d-7fe8-45a9-a8b1-db74********886e7f4
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          identifier: 073ba6e5-1dc3-4fb7-a4e7-01066f9bcd8c
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: c670eb6d-7fe8-45a9-a8b1-db74********886e7f4
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - Get Instance Info
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            identifier: bcd********9c31-6e6a-4dd5-bcda-********89ccd5b33da
+            type: workflow_job_template_node
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            identifier: ad99fc6e-d6d8-490d-87f4-5cfe********1ffdc83
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          identifier: c670eb6d-7fe8-45a9-a8b1-db74********886e7f4
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: 0cb4054b-aaa0-4034-9d8f-a********da********13a476a
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - Create CMDB relationship
+          type: job_template
+        related:
+          credentials: []
+          success_nodes: []
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          identifier: 0cb4054b-aaa0-4034-9d8f-a********da********13a476a
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: bcd********9c31-6e6a-4dd5-bcda-********89ccd5b33da
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - Create a CMDB record
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            identifier: 0cb4054b-aaa0-4034-9d8f-a********da********13a476a
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          identifier: bcd********9c31-6e6a-4dd5-bcda-********89ccd5b33da
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: ad99fc6e-d6d8-490d-87f4-5cfe********1ffdc83
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - Powershell Improvement
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            identifier: 83********6196e-6********5********-4ce9-a********c6-308e7a14********40d
+            type: workflow_job_template_node
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            identifier: a19f3f60-089********-43b5-ba********a-035593ca1********54
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          identifier: ad99fc6e-d6d8-490d-87f4-5cfe********1ffdc83
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: 83********6196e-6********5********-4ce9-a********c6-308e7a14********40d
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - Website Setup
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            identifier: d********a78a81-e43********-4814-ad1c-f865e********9f8810
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          identifier: 83********6196e-6********5********-4ce9-a********c6-308e7a14********40d
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: a6f54d83-8d********6-4466-8581-f3b4c0********bfd0d
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - sendmail
+          type: job_template
+        related:
+          credentials: []
+          success_nodes: []
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          identifier: a6f54d83-8d********6-4466-8581-f3b4c0********bfd0d
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: a19f3f60-089********-43b5-ba********a-035593ca1********54
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - Provision Access
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            identifier: d********a78a81-e43********-4814-ad1c-f865e********9f8810
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          identifier: a19f3f60-089********-43b5-ba********a-035593ca1********54
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: d********a78a81-e43********-4814-ad1c-f865e********9f8810
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - Patching
+          type: job_template
+        related:
+          credentials: []
+          success_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            identifier: a6f54d83-8d********6-4466-8581-f3b4c0********bfd0d
+            type: workflow_job_template_node
+          failure_nodes: []
+          always_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            identifier: 99b97dd1-45ce-4bfc-8ead-3f6b38********7cd********9
+            type: workflow_job_template_node
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          identifier: d********a78a81-e43********-4814-ad1c-f865e********9f8810
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: 1c960f57-9e1d-4b33-b7c4-4b90a7a064ca
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - Create Incident
+          type: job_template
+        related:
+          credentials: []
+          success_nodes: []
+          failure_nodes: []
+          always_nodes:
+          - workflow_job_template:
+              organization:
+                name: "Ames Company"
+                type: organization
+              name: Daily Demo Windows Workflow
+              type: workflow_job_template
+            identifier: a711********86********-818c-4b57-885b-9d54c3188995
+            type: workflow_job_template_node
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          identifier: 1c960f57-9e1d-4b33-b7c4-4b90a7a064ca
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: a711********86********-818c-4b57-885b-9d54c3188995
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - Update request ticket - failure
+          type: job_template
+        related:
+          credentials: []
+          success_nodes: []
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          identifier: a711********86********-818c-4b57-885b-9d54c3188995
+          type: workflow_job_template_node
+      - extra_data: {}
+        inventory:
+        scm_branch:
+        job_type:
+        job_tags:
+        skip_tags:
+        limit:
+        diff_mode:
+        verbosity:
+        execution_environment:
+        forks:
+        job_slice_count:
+        timeout:
+        all_parents_must_converge: false
+        identifier: 99b97dd1-45ce-4bfc-8ead-3f6b38********7cd********9
+        workflow_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: Daily Demo Windows Workflow
+          type: workflow_job_template
+        unified_job_template:
+          organization:
+            name: "Ames Company"
+            type: organization
+          name: DDW - Update request ticket - success
+          type: job_template
+        related:
+          credentials: []
+          success_nodes: []
+          failure_nodes: []
+          always_nodes: []
+        natural_key:
+          workflow_job_template:
+            organization:
+              name: "Ames Company"
+              type: organization
+            name: Daily Demo Windows Workflow
+            type: workflow_job_template
+          identifier: 99b97dd1-45ce-4bfc-8ead-3f6b38********7cd********9
+          type: workflow_job_template_node
+      labels: []
+      notification_templates_started: []
+      notification_templates_success: []
+      notification_templates_error: []
+      notification_templates_approvals: []
+      survey_spec: {}
+    natural_key:
+      organization:
+        name: "Ames Company"
+        type: organization
+      name: Daily Demo Windows Workflow
+      type: workflow_job_template
