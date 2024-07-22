@@ -444,3 +444,23 @@ controller_templates:
     execution_environment: Default execution environment
     project: aap.dailydemo.linux
     playbook: playbooks/eda/print.yml
+
+  - name: Windows Day 2 Audit
+    job_type: run
+    inventory: AAP Managed Inventory
+    organization: Ames Company
+    execution_environment: Windows Workshop Execution Environment
+    project: aap.dailydemo.windows
+    playbook: playbooks/auditme.yml
+    credentials:
+      - Daily Demo Windows
+
+  - name: Windows Day 2 Patching
+    job_type: run
+    inventory: AAP Managed Inventory
+    organization: Ames Company
+    execution_environment: Windows Workshop Execution Environment
+    project: aap.dailydemo.windows
+    playbook: playbooks/windows_patching_07.yml
+    credentials:
+      - Daily Demo Windows
