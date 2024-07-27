@@ -16,11 +16,11 @@ controller_templates:
     extra_vars:
       customer_portal_username: "{{ redhat_username }}"
       ansible_python_interpreter: /usr/bin/python3
-      mailfrom: "{{ smtp_username }}" ("{{ zigs_firstname }}" "{{ zigs_lastname }}")
+      mailfrom: "{{ smtp_username }} ({{ zigs_firstname }} {{ zigs_lastname }})"
       mailto:
-      - "{{ zigs_firstname }}" "{{ zigs_lastname }}" <"{{ zigs_email }}">
+        "- {{ zigs_firstname }} {{ zigs_lastname }} <{{ zigs_email }}>"
       bccto:
-      - "{{ zigs_firstname }}" "{{ zigs_lastname }}" <"{{ zigs_email }}">
+        "- {{ zigs_firstname }} {{ zigs_lastname }} <{{ zigs_email }}>"
 
   - name: Daily Demo Linux Delete
     job_type: run
@@ -181,11 +181,11 @@ controller_templates:
     credentials:
       - Mail Server - Ames
     extra_vars:
-      mailfrom: "{{ smtp_username }}" ("{{ zigs_firstname }}" "{{ zigs_lastname }}")
+      mailfrom: "{{ smtp_username }} ({{ zigs_firstname }} {{ zigs_lastname }})"
       mailto:
-      - "{{ zigs_firstname }}" "{{ zigs_lastname }}" <"{{ zigs_email }}">
+        "- {{ zigs_firstname }} {{ zigs_lastname }} <{{ zigs_email }}>"
       bccto:
-      - "{{ zigs_firstname }}" "{{ zigs_lastname }}" <"{{ zigs_email }}">
+        "- {{ zigs_firstname }} {{ zigs_lastname }} <{{ zigs_email }}>"
 
   - name: DDL - Update request ticket - failure
     job_type: run
@@ -346,11 +346,11 @@ controller_templates:
     credentials:
       - Mail Server - Ames
     extra_vars:
-      mailfrom: "{{ smtp_username }}" ("{{ zigs_firstname }}" "{{ zigs_lastname }}")
+      mailfrom: "{{ smtp_username }} ({{ zigs_firstname }} {{ zigs_lastname }})"
       mailto:
-      - "{{ zigs_firstname }}" "{{ zigs_lastname }}" <"{{ zigs_email }}">
+        "- {{ zigs_firstname }} {{ zigs_lastname }} <{{ zigs_email }}>"
       bccto:
-      - "{{ zigs_firstname }}" "{{ zigs_lastname }}" <"{{ zigs_email }}">
+        "- {{ zigs_firstname }} {{ zigs_lastname }} <{{ zigs_email }}>"
 
   - name: DDW - Update request ticket - failure
     job_type: run
