@@ -17,9 +17,9 @@ controller_templates:
     extra_vars:
       ansible_python_interpreter: /usr/bin/python3
       mailfrom: '{{ smtp_username }} ({{ zigs_firstname }} {{ zigs_lastname }})'
-      mailto: |
+      mailto: >
         - {{ zigs_firstname }} {{ zigs_lastname }} <{{ zigs_email }}>
-      bccto: |
+      bccto: >
         - {{ zigs_firstname }} {{ zigs_lastname }} <{{ zigs_email }}>
 
   - name: Daily Demo Linux Delete
@@ -181,9 +181,9 @@ controller_templates:
       - Mail Server - Ames
     extra_vars:
       mailfrom: '{{ smtp_username }} ({{ zigs_firstname }} {{ zigs_lastname }})'
-      mailto: |
+      mailto: >
         - {{ zigs_firstname }} {{ zigs_lastname }} <{{ zigs_email }}>
-      bccto: |
+      bccto: >
         - {{ zigs_firstname }} {{ zigs_lastname }} <{{ zigs_email }}>
 
   - name: DDL - Update request ticket - failure
