@@ -181,9 +181,9 @@ controller_templates:
       - Mail Server - Ames
     extra_vars:
       mailfrom: '{{ smtp_username }} ({{ zigs_firstname }} {{ zigs_lastname }})'
-      mailto: |
+      mailto: >
         - {{ zigs_firstname }} {{ zigs_lastname }} <{{ zigs_email }}>
-      bccto: |
+      bccto: >
         - {{ zigs_firstname }} {{ zigs_lastname }} <{{ zigs_email }}>
 
   - name: DDL - Update request ticket - failure
