@@ -2,7 +2,7 @@
 controller_workflows:
   - name: Workflow Approval Demo
     description: ''
-    extra_vars: "---"
+    extra_vars: ''
     organization:
     survey_enabled: false
     allow_simultaneous: false
