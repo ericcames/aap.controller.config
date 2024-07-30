@@ -16,8 +16,22 @@ controller_templates:
       - Red Hat Customer Portal - Ames
     extra_vars:
       ansible_python_interpreter: /usr/bin/python3
-      mailfrom: "{{ smtp_username }} ({{ zigs_firstname }} {{ zigs_lastname }})"
-      mailto:
-        "- {{ zigs_firstname }} {{ zigs_lastname }} <{{ zigs_email }}>"
-      bccto:
-        "- {{ zigs_firstname }} {{ zigs_lastname }} <{{ zigs_email }}>"
+      mailfrom: '{{ smtp_username }} ({{ zigs_firstname }} {{ zigs_lastname }})'
+      mailto: >-
+        - {{ zigs_firstname }} {{ zigs_lastname }} <{{ zigs_email }}>
+      bccto: >-
+        - {{ zigs_firstname }} {{ zigs_lastname }} <{{ zigs_email }}>
+
+  - name: Daily Demo Linux Delete
+    job_type: run
+    inventory: AAP Managed Inventory
+    organization: Ames Company
+    execution_environment: Default execution environment
+    project: aap.dailydemo.linux
+    playbook: playbooks/site_delete.yml
+    credentials:
+      - aap.kona.services:8443 controller
+      - AWS Credential
+      - AWS Machine Credential
+    extra_vars:
+      customer_portal_username: "{{ redhat_username }}"
