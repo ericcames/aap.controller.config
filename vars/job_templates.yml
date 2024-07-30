@@ -181,7 +181,20 @@ controller_templates:
       - Mail Server - Ames
     extra_vars:
       mailfrom: '{{ smtp_username }} ({{ zigs_firstname }} {{ zigs_lastname }})'
-      mailto: >
+      mailto: |
         - {{ zigs_firstname }} {{ zigs_lastname }} <{{ zigs_email }}>
-      bccto: >
+      bccto: |
         - {{ zigs_firstname }} {{ zigs_lastname }} <{{ zigs_email }}>
+
+  - name: DDL - Update request ticket - failure
+    job_type: run
+    inventory: AAP Managed Inventory
+    organization: Ames Company
+    execution_environment: Default execution environment
+    project: aap.dailydemo.linux
+    playbook: playbooks/servicenow/update_sn_req_itm.yml
+    credentials:
+      - ServiceNow ITSM Credential
+    extra_vars:
+      requested_item_comments: 'Uh-Oh something broke.\n\nServiceNow incident number: {{ incident_ticket }}\n\nAnsible Job ID: {{ my_job_id }}\n\nMessage: {{ my_error }}'
+      requested_item_state: "4"
