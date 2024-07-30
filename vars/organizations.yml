@@ -2,6 +2,9 @@
 controller_organizations:
   - name: Ames Company
     description: Ames' Automation Company
+    galaxy_credentials:
+      - Red Hat Automation Hub - Ames
+      - Ansible Galaxy
 
   - name: Lowcher Company
     description: Lowcher's Automation Company
