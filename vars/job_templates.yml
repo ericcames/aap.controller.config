@@ -463,3 +463,35 @@ controller_templates:
     playbook: playbooks/windows_patching_07.yml
     credentials:
       - Daily Demo Windows
+    survey_enabled: true
+    survey_spec:
+      spec:
+        - name: Reboot
+          type: multiplechoice
+          question_name: Should we reboot after patching?
+          question_description: Should the server reboot after patching?
+          variable: windows_patching_reboot_server
+          required: true
+          default: "no"
+          choices:
+            - "yes"
+            - "no"
+        - name: Patches
+          type: multiselect
+          question_name: What kind of patches do you want to install?
+          question_description: Select the patches you want to install.
+          variable: patches
+          required: true
+          default: CriticalUpdates
+          choices:
+            - Application
+            - Connectors
+            - CriticalUpdates
+            - DefinitionUpdates
+            - DeveloperKits
+            - FeaturePacks Guidance
+            - SecurityUpdates
+            - ServicePacks
+            - Tools
+            - UpdateRollups
+            - Updates
