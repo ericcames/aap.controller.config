@@ -465,6 +465,8 @@ controller_templates:
       - Daily Demo Windows
     survey_enabled: true
     survey_spec:
+      name: ""
+      description: ""
       spec:
         - name: Reboot
           type: multiplechoice
