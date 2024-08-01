@@ -14,8 +14,6 @@ controller_workflows:
               type: workflow_approval
       -   identifier: node201
           related:
-            success_nodes:
-            -   identifier: node301
           unified_job_template:
               name: python secrets to localhost
               organization:
