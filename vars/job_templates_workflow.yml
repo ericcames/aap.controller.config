@@ -140,6 +140,7 @@ controller_workflows:
             type: job_template
       -   identifier: DDW - Update request ticket - success
           unified_job_template:
+            name: DDW - Update request ticket - success
             organization:
               name: Ames Company
             type: job_template
