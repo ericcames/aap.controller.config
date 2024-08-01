@@ -278,7 +278,7 @@ controller_workflows:
               type: job_template
       -   identifier: DDL - sendmail
           related:
-            success_nodes:
+            always_nodes:
             -   identifier: DDL - Update request ticket - success
           unified_job_template:
               name: DDL - sendmail
