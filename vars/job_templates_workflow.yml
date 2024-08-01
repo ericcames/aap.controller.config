@@ -1,6 +1,7 @@
 ---
 controller_workflows:
 -   name: Workflow Approval Demo
+    organization: Ames Company
     related:
       workflow_nodes:
       -   identifier: Python Script Approval
@@ -20,6 +21,7 @@ controller_workflows:
             type: job_template
 
 -   name: Daily Demo Windows Workflow
+    organization: Ames Company
     extra_vars:
       ticket_number: "RITM0010386"
     related:
