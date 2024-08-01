@@ -334,6 +334,7 @@ controller_templates:
     playbook: playbooks/windows_account_create_06.yml
     credentials:
       - Daily Demo Windows
+      - ericames-vault
 
   - name: DDW - sendmail
     job_type: run
