@@ -18,3 +18,28 @@ controller_workflows:
             organization:
               name: Ames Company
             type: job_template
+
+-   name: Daily Demo Windows Workflow
+    extra_vars: "---\nticket_number: \"RITM0010386\""
+    related:
+      workflow_nodes:
+      -   identifier: DDW - Network Create
+          related:
+            success_nodes:
+            -   identifier: DDW - VM Create
+          unified_job_template:
+              name: DDW - Network Create
+              organization:
+                name: Ames Company
+              type: job_template
+      -   identifier: DDW - VM Create
+          related:
+            success_nodes:
+            -   identifier: DDW - Inventory Update
+            failure_nodes:
+            -   identifier: DDW - Create Incident
+          unified_job_template:
+            name: DDW - VM Create
+            organization:
+              name: Ames Company
+            type: job_template
