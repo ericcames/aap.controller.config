@@ -146,3 +146,148 @@ controller_workflows:
             organization:
               name: Ames Company
             type: job_template
+
+-   name: Daily Demo Linux Workflow
+    organization: Ames Company
+    extra_vars:
+      ticket_number: "RITM0010386"
+    related:
+      workflow_nodes:
+      -   identifier: DDL - Network Create
+          related:
+            success_nodes:
+            -   identifier: DDL - VM Create
+          unified_job_template:
+              name: DDL - Network Create
+              organization:
+                name: Ames Company
+              type: job_template
+      -   identifier: DDL - VM Create
+          related:
+            success_nodes:
+            -   identifier: DDL - Inventory Update
+            failure_nodes:
+            -   identifier: DDL - Create Incident
+          unified_job_template:
+              name: DDL - VM Create
+              organization:
+                name: Ames Company
+              type: job_template
+      -   identifier: DDL - Create Incident
+          related:
+            always_nodes:
+            -   identifier: DDL - Update request ticket - failure
+          unified_job_template:
+              name: DDL - Create Incident
+              organization:
+                name: Ames Company
+              type: job_template
+      -   identifier: DDL - Inventory Update
+          related:
+            success_nodes:
+            -   identifier: DDL - Get Instance Info
+          unified_job_template:
+              name: DDL - Inventory Update
+              organization:
+                name: Ames Company
+              type: job_template
+      -   identifier: DDL - Update request ticket - failure
+          unified_job_template:
+              name: DDL - Update request ticket - failure
+              organization:
+                name: Ames Company
+              type: job_template
+      -   identifier: DDL - Get Instance Info
+          related:
+            success_nodes:
+            -   identifier: DDL - Red Hat Registration
+            -   identifier: DDL - Create a CMDB record
+          unified_job_template:
+              name: DDL - Get Instance Info
+              organization:
+                name: Ames Company
+              type: job_template
+      -   identifier: DDL - Create a CMDB record
+          related:
+            success_nodes:
+            -   identifier: DDL - Create CMDB relationship
+          unified_job_template:
+              name: DDL - Create a CMDB record
+              organization:
+                name: Ames Company
+              type: job_template
+      -   identifier: DDL - Create CMDB relationship
+          unified_job_template:
+              name: DDL - Create CMDB relationship
+              organization:
+                name: Ames Company
+              type: job_template
+      -   identifier: DDL - Red Hat Registration
+          related:
+            success_nodes:
+            -   identifier: DDL - Configuration Management
+          unified_job_template:
+              name: DDL - Red Hat Registration
+              organization:
+                name: Ames Company
+              type: job_template
+      -   identifier: DDL - Configuration Management
+          related:
+            success_nodes:
+            -   identifier: DDL - Provision Access
+          unified_job_template:
+              name: DDL - Configuration Management
+              organization:
+                name: Ames Company
+              type: job_template
+      -   identifier: DDL - Provision Access
+          related:
+            success_nodes:
+            -   identifier: DDL - Application Install
+          unified_job_template:
+              name: DDL - Provision Access
+              organization:
+                name: Ames Company
+              type: job_template
+      -   identifier: DDL - Application Install
+          related:
+            success_nodes:
+            -   identifier: DDL - Website deployment
+          unified_job_template:
+              name: DDL - Application Install
+              organization:
+                name: Ames Company
+              type: job_template
+      -   identifier: DDL - Website deployment
+          related:
+            success_nodes:
+            -   identifier: DDL - Reporting
+          unified_job_template:
+              name: DDL - Website deployment
+              organization:
+                name: Ames Company
+              type: job_template
+      -   identifier: DDL - Reporting
+          related:
+            success_nodes:
+            -   identifier: DDL - sendmail
+          unified_job_template:
+              name: DDL - Reporting
+              organization:
+                name: Ames Company
+              type: job_template
+      -   identifier: DDL - sendmail
+          related:
+            success_nodes:
+            -   identifier: DDL - Update request ticket - success
+          unified_job_template:
+              name: DDL - sendmail
+              organization:
+                name: Ames Company
+              type: job_template
+      -   identifier: DDL - Update request ticket - success
+          unified_job_template:
+              name: DDL - Update request ticket - success
+              organization:
+                name: Ames Company
+              type: job_template
