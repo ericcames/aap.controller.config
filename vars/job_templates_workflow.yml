@@ -20,8 +20,7 @@ controller_workflows:
             type: job_template
 
 -   name: Daily Demo Windows Workflow
-    extra_vars: |-
-      ---
+    extra_vars:
       ticket_number: "RITM0010386"
     related:
       workflow_nodes:
