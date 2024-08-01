@@ -5,17 +5,16 @@ controller_workflows:
       workflow_nodes:
       -   identifier: node101
           related:
-            always_nodes:
+            success_nodes:
             -   identifier: node201
           unified_job_template:
-              name: Python Script Approval
               description: This workflow needs an approval
               timeout: 900
               type: workflow_approval
+              name: Python Script Approval
       -   identifier: node201
-          related:
           unified_job_template:
-              name: python secrets to localhost
-              organization:
-                  name: Ames Company
-              type: job_template
+            name: python secrets to localhost
+            organization:
+              name: Ames Company
+            type: job_template
