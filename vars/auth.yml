@@ -1,0 +1,4 @@
+---
+controller_username: "{{ controller_username }}"
+controller_hostname: "{{ controller_hostname }}"
+controller_password: "{{ controller_password }}"
