@@ -2,3 +2,5 @@
 controller_username: "{{ controller_username }}"
 controller_hostname: "{{ controller_hostname }}"
 controller_password: "{{ controller_password }}"
+controller_validate_certs: false
+controller_configuration_enforce_defaults: true
