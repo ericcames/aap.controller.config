@@ -43,3 +43,25 @@ controller_workflows:
             organization:
               name: Ames Company
             type: job_template
+      -   identifier: DDW - Inventory Update
+          related:
+            success_nodes:
+            -   identifier: ''
+            failure_nodes:
+            -   identifier: ''
+          unified_job_template:
+            name: DDW - Inventory Update
+            organization:
+              name: Ames Company
+            type: job_template
+      -   identifier: DDW - Create Incident
+          related:
+            success_nodes:
+            -   identifier: ''
+            failure_nodes:
+            -   identifier: ''
+          unified_job_template:
+            name: DDW - Create Incident
+            organization:
+              name: Ames Company
+            type: job_template
