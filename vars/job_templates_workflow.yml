@@ -69,8 +69,33 @@ controller_workflows:
               name: Ames Company
             type: job_template
       -   identifier: DDW - Get Instance Info
+          related:
+            success_nodes:
+            -   identifier: DDW - Create a CMDB record
+            -   identifier: DDW - Powershell Improvement
           unified_job_template:
             name: DDW - Get Instance Info
+            organization:
+              name: Ames Company
+            type: job_template
+      -   identifier: DDW - Create a CMDB record
+          related:
+            success_nodes:
+            -   identifier: DDW - Create CMDB relationship
+          unified_job_template:
+            name: DDW - Create a CMDB record
+            organization:
+              name: Ames Company
+            type: job_template
+      -   identifier: DDW - Create CMDB relationship
+          unified_job_template:
+            name: DDW - Create CMDB relationship
+            organization:
+              name: Ames Company
+            type: job_template
+      -   identifier: DDW - Powershell Improvement
+          unified_job_template:
+            name: DDW - Powershell Improvement
             organization:
               name: Ames Company
             type: job_template
