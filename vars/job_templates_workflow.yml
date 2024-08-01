@@ -94,8 +94,52 @@ controller_workflows:
               name: Ames Company
             type: job_template
       -   identifier: DDW - Powershell Improvement
+          related:
+            success_nodes:
+            -   identifier: DDW - Website Setup
+            -   identifier: DDW - Provision Access
           unified_job_template:
             name: DDW - Powershell Improvement
+            organization:
+              name: Ames Company
+            type: job_template
+      -   identifier: DDW - Website Setup
+          related:
+            success_nodes:
+            -   identifier: DDW - Patching
+          unified_job_template:
+            name: DDW - Website Setup
+            organization:
+              name: Ames Company
+            type: job_template
+      -   identifier: DDW - Provision Access
+          related:
+            success_nodes:
+            -   identifier: DDW - Patching
+          unified_job_template:
+            name: DDW - Provision Access
+            organization:
+              name: Ames Company
+            type: job_template
+      -   identifier: DDW - Patching
+          related:
+            success_nodes:
+            -   identifier: DDW - sendmail
+            always_nodes:
+            -   identifier: DDW - Update request ticket - success
+          unified_job_template:
+            name: DDW - Patching
+            organization:
+              name: Ames Company
+            type: job_template
+      -   identifier: DDW - sendmail
+          unified_job_template:
+            name: DDW - sendmail
+            organization:
+              name: Ames Company
+            type: job_template
+      -   identifier: DDW - Update request ticket - success
+          unified_job_template:
             organization:
               name: Ames Company
             type: job_template
