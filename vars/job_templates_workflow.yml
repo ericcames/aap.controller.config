@@ -20,7 +20,9 @@ controller_workflows:
             type: job_template
 
 -   name: Daily Demo Windows Workflow
-    extra_vars: "---\nticket_number: \"RITM0010386\""
+    extra_vars: |-
+      ---
+      ticket_number: "RITM0010386"
     related:
       workflow_nodes:
       -   identifier: DDW - Network Create
